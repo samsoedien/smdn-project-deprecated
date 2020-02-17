@@ -1,0 +1,8 @@
+serviceWorker.ts
+react-app-env.d.ts
+src/**/__tests__/**
+
+dist/**/*.js
+storybook-static/**/*.js
+
+node_modules
