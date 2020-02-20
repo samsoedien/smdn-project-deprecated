@@ -1,0 +1,9 @@
+{
+  "name": "@smdn-project/shared",
+  "version": "1.0.0",
+  "description": "Shared functions and utils",
+  "main": "index.ts",
+  "repository": "https://github.com/samsoedien/smdn-project/tree/master/packages/shared",
+  "author": "Samsoedien",
+  "license": "MIT"
+}

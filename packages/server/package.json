@@ -1,9 +1,12 @@
 {
-  "name": "@smdn/server",
+  "name": "@smdn-project/server",
   "version": "0.1.0",
   "description": "Express Backend",
-  "main": "index.js",
+  "main": "index.ts",
   "repository": "https://github.com/samsoedien/smdn-project/tree/master/packages/server",
   "author": "Samsoedien",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@smdn-project/shared": "1.0.0"
+  }
 }
