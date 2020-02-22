@@ -12,7 +12,8 @@
   "scripts": {
     "bootstrap": "yarn lerna bootstrap",
     "clean": "yarn lerna clean",
-    "lint": "eslint ./packages --ext js,jsx,ts,tsx",
+    "lint": "yarn lint:scripts && yarn lint:styles",
+    "lint:scripts": "eslint ./packages --ext js,jsx,ts,tsx",
     "lint:styles": "stylelint './packages/**/*.tsx'",
     "storybook": "yarn lerna run storybook --stream"
   },
@@ -47,7 +48,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "yarn --silent lint --fix"
+      "yarn --silent lint:scripts --fix"
     ],
     "*.tsx": [
       "yarn --silent lint:styles"
