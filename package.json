@@ -12,7 +12,7 @@
   "scripts": {
     "start": "yarn lerna run start",
     "bootstrap": "yarn lerna bootstrap",
-    "clean": "yarn lerna clean",
+    "clean": "yarn lerna clean --yes",
     "lint": "yarn lint:scripts && yarn lint:styles",
     "lint:scripts": "eslint ./packages --ext js,jsx,ts,tsx",
     "lint:styles": "stylelint './packages/**/*.tsx'",
@@ -32,7 +32,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
     "husky": "^4.2.3",
     "lerna": "^3.20.2",
     "lint-staged": "^10.0.7",
