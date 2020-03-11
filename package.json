@@ -10,6 +10,7 @@
     "packages/*"
   ],
   "scripts": {
+    "start": "yarn lerna run start",
     "bootstrap": "yarn lerna bootstrap",
     "clean": "yarn lerna clean",
     "lint": "yarn lint:scripts && yarn lint:styles",

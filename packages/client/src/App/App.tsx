@@ -2,6 +2,8 @@ import React from 'react'
 import logo from '../logo.svg'
 import './App.css'
 
+import { Button } from '@smdn/core'
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +16,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Button appearance="primary">SMDN Button</Button>
     </div>
   )
 }
