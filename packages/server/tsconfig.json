@@ -1,0 +1,21 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es6", "dom"],
+    "allowJs": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
+    "noEmitOnError": true,
+    "strict": true,
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "typeRoots": ["node_modules/@types", "typings"],
+    "esModuleInterop": true
+  },
+  "exclude": ["**/*.test.ts"],
+  "include": ["./src/**/*", "./typings"]
+}
