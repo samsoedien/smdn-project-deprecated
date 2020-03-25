@@ -10,11 +10,6 @@
     "at-rule-no-unknown": null,
     "no-descending-specificity": null,
     "color-no-invalid-hex": null,
-    "plugin/8-point-grid": {
-      "base": 4,
-      "whitelist": ["2px", "1px"],
-      "ignore": ["width", "height"]
-    },
     "prettier/prettier": true
   }
 }
