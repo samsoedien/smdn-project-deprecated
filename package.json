@@ -10,7 +10,9 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "yarn lerna run start",
+    "start": "yarn lerna run start --stream",
+    "server": "yarn lerna run start --stream --scope @smdn-project/server",
+    "client": "yarn lerna run start --stream --scope @smdn-project/client",
     "bootstrap": "yarn lerna bootstrap",
     "clean": "yarn lerna clean --yes",
     "lint": "yarn lint:scripts && yarn lint:styles",
@@ -21,10 +23,10 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@typescript-eslint/eslint-plugin": "^2.20.0",
-    "@typescript-eslint/parser": "^2.20.0",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
     "commitlint": "^8.3.5",
-    "eslint": "^6.8.0",
+    "eslint": "6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
@@ -32,13 +34,14 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^2.5.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
     "husky": "^4.2.3",
-    "lerna": "^3.20.2",
+    "lerna": "^3.22.1",
     "lint-staged": "^10.0.7",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.4",
     "stylelint": "^13.2.0",
     "stylelint-config-recommended": "^3.0.0",
+    "stylelint-prettier": "^1.1.2",
     "typescript": "^3.7.5"
   },
   "husky": {
@@ -54,5 +57,9 @@
     "*.tsx": [
       "yarn --silent lint:styles"
     ]
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-app-rewired": "^2.1.6"
   }
 }

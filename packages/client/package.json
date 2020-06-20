@@ -1,24 +1,7 @@
 {
   "name": "@smdn-project/client",
   "version": "0.1.0",
-  "private": true,
   "repository": "https://github.com/samsoedien/smdn-project/tree/master/packages/client",
-  "dependencies": {
-    "@smdn-project/shared": "1.0.0",
-    "@smdn/core": "^0.1.1-alpha.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.4.0",
-    "styled-components": "^5.0.1",
-    "typescript": "~3.7.2"
-  },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
@@ -26,6 +9,45 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^5.3.19",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-jest": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addon-storyshots": "^5.3.19",
+    "@storybook/addon-storysource": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^3.1.2",
+    "@storybook/react": "^5.3.19",
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/socket.io-client": "^1.4.32",
+    "@types/styled-components": "^5.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "node-sass": "^4.13.1",
+    "react-app-rewire-yarn-workspaces": "^1.0.3",
+    "react-app-rewired": "^2.1.6"
+  },
+  "dependencies": {
+    "@smdn-project/shared": "1.0.0",
+    "@smdn/core": "^0.1.1-alpha.0",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.2",
+    "@testing-library/user-event": "^12.0.2",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.4.1",
+    "socket.io-client": "^2.3.0",
+    "styled-components": "^5.0.1",
+    "typescript": "~3.9.5"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,25 +63,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@storybook/addon-a11y": "^5.3.13",
-    "@storybook/addon-actions": "^5.3.13",
-    "@storybook/addon-docs": "^5.3.13",
-    "@storybook/addon-jest": "^5.3.13",
-    "@storybook/addon-knobs": "^5.3.13",
-    "@storybook/addon-links": "^5.3.13",
-    "@storybook/addon-storyshots": "^5.3.13",
-    "@storybook/addon-storysource": "^5.3.13",
-    "@storybook/addons": "^5.3.13",
-    "@storybook/preset-create-react-app": "^1.5.2",
-    "@storybook/react": "^5.3.13",
-    "@types/enzyme": "^3.10.5",
-    "@types/enzyme-adapter-react-16": "^1.0.6",
-    "@types/styled-components": "^5.0.1",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "react-app-rewire-yarn-workspaces": "^1.0.3",
-    "react-app-rewired": "^2.1.5"
   }
 }
