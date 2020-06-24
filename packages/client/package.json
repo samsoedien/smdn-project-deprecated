@@ -48,7 +48,8 @@
     "react-scripts": "3.4.1",
     "socket.io-client": "^2.3.0",
     "styled-components": "^5.0.1",
-    "typescript": "~3.9.5"
+    "typescript": "~3.9.5",
+    "react-app-rewired": "^2.1.6"
   },
   "eslintConfig": {
     "extends": "react-app"
