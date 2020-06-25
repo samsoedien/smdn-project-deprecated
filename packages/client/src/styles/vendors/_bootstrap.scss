@@ -1,0 +1,24 @@
+/** Bootstrap Variables */
+$primary: green;
+
+/** Bootstrap Utilities */
+$utilities: () !default;
+$utilities: map-merge(
+  (
+    'custom-padding': (
+      property: padding,
+      class: cp,
+      values: (
+        0: 0,
+        1: 0.3rem,
+        2: 0.5rem,
+        3: 0.7rem,
+        4: 0.9rem,
+        5: 1rem,
+      ),
+    ),
+  ),
+  $utilities
+);
+
+@import '~bootstrap/scss/bootstrap.scss';
