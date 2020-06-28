@@ -10,14 +10,14 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "yarn lerna run start --stream --no-bail",
+    "start": "yarn lerna run start --stream",
     "server": "yarn lerna run start --stream --scope @smdn-project/server",
     "client": "yarn lerna run start --stream --scope @smdn-project/client",
     "bootstrap": "yarn lerna bootstrap",
     "clean": "yarn lerna clean --yes",
     "lint": "yarn lint:scripts && yarn lint:styles",
     "lint:scripts": "eslint ./packages --ext js,jsx,ts,tsx",
-    "lint:styles": "stylelint './packages/**/*.tsx'",
+    "lint:styles": "stylelint ./packages/**/*.scss",
     "storybook": "yarn lerna run storybook --stream"
   },
   "devDependencies": {
@@ -40,7 +40,8 @@
     "lint-staged": "^10.0.7",
     "prettier": "^2.0.5",
     "stylelint": "^13.2.0",
-    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-standard": "^20.0.0",
     "stylelint-prettier": "^1.1.2",
     "typescript": "^3.7.5"
   },
