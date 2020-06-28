@@ -56,7 +56,7 @@
     "./packages/**/*.{js,jsx,ts,tsx}": [
       "yarn --silent lint:scripts --fix"
     ],
-    "*.{css,scss,tsx}": [
+    "./packages/**/*.{css,scss}": [
       "yarn --silent lint:styles --fix"
     ]
   }
