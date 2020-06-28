@@ -1,6 +1,6 @@
 {
-  "processors": [],
-  "extends": ["stylelint-config-standard", "stylelint-config-css-modules"],
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": ["stylelint-config-standard", "stylelint-config-css-modules", "stylelint-config-styled-components"],
   "plugins": ["stylelint-prettier"],
   "rules": {
     "at-rule-empty-line-before": null,

@@ -42,7 +42,9 @@
     "stylelint": "^13.2.0",
     "stylelint-config-css-modules": "^2.2.0",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
     "stylelint-prettier": "^1.1.2",
+    "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "^3.7.5"
   },
   "dependencies": {},
@@ -58,6 +60,9 @@
     ],
     "./packages/**/*.{css,scss}": [
       "yarn --silent lint:styles --fix"
+    ],
+    "./packages/**/*.{tsx}": [
+      "yarn --silent lint:styles"
     ]
   }
 }
