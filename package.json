@@ -16,8 +16,8 @@
     "bootstrap": "yarn lerna bootstrap",
     "clean": "yarn lerna clean --yes",
     "lint": "yarn lint:scripts && yarn lint:styles",
-    "lint:scripts": "eslint ./packages --ext js,jsx,ts,tsx",
-    "lint:styles": "stylelint ./packages/**/*.scss",
+    "lint:scripts": "eslint ./packages/**/*.{js,jsx,ts,tsx}",
+    "lint:styles": "stylelint ./packages/**/*.{css,scss,tsx}",
     "storybook": "yarn lerna run storybook --stream"
   },
   "devDependencies": {
@@ -56,8 +56,8 @@
     "./packages/**/*.{js,jsx,ts,tsx}": [
       "yarn --silent lint:scripts --fix"
     ],
-    "*.tsx": [
-      "yarn --silent lint:styles"
+    "*.{css,scss,tsx}": [
+      "yarn --silent lint:styles --fix"
     ]
   }
 }
