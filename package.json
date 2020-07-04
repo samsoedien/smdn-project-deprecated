@@ -59,7 +59,7 @@
       "yarn --silent lint:scripts --fix"
     ],
     "./packages/**/*.{css,scss}": [
-      "yarn --silent lint:styles"
+      "yarn --silent lint:styles --fix"
     ],
     "./packages/**/*.{tsx}": [
       "yarn --silent lint:styles"
