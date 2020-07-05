@@ -3,12 +3,11 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-css-modules",
-    "stylelint-selector-bem-pattern",
     "stylelint-config-styled-components",
     "stylelint-config-prettier",
     "stylelint-prettier/recommended"
   ],
-  "plugins": ["stylelint-prettier"],
+  "plugins": ["stylelint-selector-bem-pattern", "stylelint-prettier"],
   "rules": {
     "at-rule-empty-line-before": null,
     "declaration-empty-line-before": null,
@@ -17,6 +16,15 @@
     "at-rule-no-unknown": null,
     "no-descending-specificity": null,
     "color-no-invalid-hex": null,
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.util-[a-z]+$",
+      "implicitComponents": "**/*.module.{css,scss}"
+    },
     "prettier/prettier": true
   }
 }

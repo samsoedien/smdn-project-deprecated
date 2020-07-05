@@ -9,7 +9,11 @@ import styles from './App.module.scss'
 export interface IAppProps {}
 
 const App: React.FC<IAppProps> = () => {
-  return <div className={styles['app']}>App</div>
+  return (
+    <div className={styles['App']}>
+      <p className={styles['App__text']}>App</p>
+    </div>
+  )
 }
 
 App.propTypes = {}
