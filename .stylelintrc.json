@@ -3,6 +3,7 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-css-modules",
+    "stylelint-selector-bem-pattern",
     "stylelint-config-styled-components",
     "stylelint-config-prettier",
     "stylelint-prettier/recommended"
