@@ -1,0 +1,21 @@
+0 silly argv {
+0 silly argv   _: [ 'run' ],
+0 silly argv   stream: true,
+0 silly argv   scope: '@smdn-project/native',
+0 silly argv   lernaVersion: '3.22.1',
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js',
+0 silly argv   script: 'start'
+0 silly argv }
+1 notice cli v3.22.1
+2 verbose rootPath C:\Users\Samsoedien\Desktop\Projects\smdn-project
+3 notice filter including "@smdn-project/native"
+4 info filter [ '@smdn-project/native' ]
+5 error TypeError: Cannot read property 'split' of undefined
+5 error     at Minimatch.match (C:\Users\Samsoedien\Desktop\Projects\smdn-project\node_modules\minimatch\minimatch.js:713:11)
+5 error     at C:\Users\Samsoedien\Desktop\Projects\smdn-project\node_modules\minimatch\minimatch.js:691:15
+5 error     at Array.filter (<anonymous>)
+5 error     at Function.minimatch.match (C:\Users\Samsoedien\Desktop\Projects\smdn-project\node_modules\minimatch\minimatch.js:690:15)
+5 error     at C:\Users\Samsoedien\Desktop\Projects\smdn-project\node_modules\multimatch\index.js:23:33
+5 error     at Array.reduce (<anonymous>)
+5 error     at module.exports (C:\Users\Samsoedien\Desktop\Projects\smdn-project\node_modules\multimatch\index.js:15:18)
+5 error     at filterPackages (C:\Users\Samsoedien\Desktop\Projects\smdn-project\node_modules\@lerna\filter-packages\filter-packages.js:45:28)
