@@ -20,7 +20,8 @@
     "lint:scripts": "eslint ./packages/**/*.{js,jsx,ts,tsx}",
     "lint:styles": "stylelint ./packages/**/*.{css,scss,tsx}",
     "test": "jest",
-    "storybook": "yarn lerna run storybook --stream"
+    "storybook": "yarn lerna run storybook --stream",
+    "docker": "docker-compose up"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
