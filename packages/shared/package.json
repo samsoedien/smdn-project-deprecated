@@ -5,5 +5,8 @@
   "main": "index.ts",
   "repository": "https://github.com/samsoedien/smdn-project/tree/master/packages/shared",
   "author": "Samsoedien",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }

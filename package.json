@@ -21,7 +21,9 @@
     "lint:styles": "stylelint ./packages/**/*.{css,scss,tsx}",
     "test": "jest",
     "storybook": "yarn lerna run storybook --stream",
-    "docker": "docker-compose up"
+    "docker": "docker-compose up",
+    "release": "yarn lerna publish",
+    "prerelease": "yarn lerna publish --prerelease"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.0.1",
