@@ -2,11 +2,15 @@
   "name": "@smdn-project/shared",
   "version": "0.1.0",
   "description": "Shared functions and utils",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "repository": "https://github.com/samsoedien/smdn-project/tree/master/packages/shared",
   "author": "Samsoedien",
   "license": "MIT",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist/* && rm -rf lib/* && rm -rf *.tsbuildinfo"
   }
 }

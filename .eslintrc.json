@@ -28,9 +28,9 @@
   },
   "plugins": ["react", "@typescript-eslint", "prettier", "jest"],
   "rules": {
-    "prettier/prettier": "error",
+    "@typescript-eslint/no-unused-vars": "warn",
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "error",
+    "prettier/prettier": "error",
     "no-console": "off",
     "import/prefer-default-export": "warn",
     "import/no-unresolved": "warn",

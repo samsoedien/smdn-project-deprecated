@@ -9,7 +9,8 @@
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "clean": "rm -rf dist/* && rm -rf lib/* && rm -rf *.tsbuildinfo"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^5.3.19",

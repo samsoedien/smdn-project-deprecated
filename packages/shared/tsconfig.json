@@ -1,0 +1,19 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "declarationDir": "dist",
+    "outDir": "dist",
+    "rootDir": "src",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "composite": true,
+    "typeRoots": ["./node_modules/@types"]
+  },
+  "exclude": ["dist", "tests", "**/*.test.*", "**/*.stories.*"],
+  "extends": "../../tsconfig.json",
+  "include": ["src/**/*"],
+  "references": []
+}

@@ -1,25 +1,38 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "strict": true,
+    "baseUrl": "./packages",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
+    "isolatedModules": false,
+    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    "noEmitOnError": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "pretty": true,
+    "removeComments": false,
+    "strict": true,
+    "target": "es2015",
+    "useDefineForClassFields": false,
+    "declarationMap": true,
+    "typeRoots": ["**/node_modules/@types"]
   },
-  "include": [
-    "src"
+  "include": ["./packages/**/*"],
+  "exclude": ["**/node_modules/*", "**/*.stories.*", "**/*.test.*"],
+  "files": [],
+  "references": [
+    {
+      "path": "packages/client"
+    },
+    {
+      "path": "packages/server"
+    },
+    {
+      "path": "packages/shared"
+    }
   ]
 }

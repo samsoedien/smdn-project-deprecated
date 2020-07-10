@@ -16,7 +16,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "",
-    "test:e2e": ""
+    "test:e2e": "",
+    "clean": "rm -rf dist/* && rm -rf lib/* && rm -rf *.tsbuildinfo"
   },
   "dependencies": {
     "@smdn-project/shared": "^0.1.0",
