@@ -26,6 +26,7 @@
     "@storybook/react": "^5.3.19",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/react-redux": "^7.1.9",
     "@types/react-router-dom": "^5.1.5",
     "@types/socket.io-client": "^1.4.32",
     "@types/styled-components": "^5.0.1",
@@ -38,6 +39,7 @@
     "stylelint-config-prettier": "^8.0.2"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
     "@smdn-project/shared": "^0.1.0",
     "@smdn/core": "^0.1.1-alpha.0",
     "@testing-library/jest-dom": "^5.5.0",
@@ -52,6 +54,7 @@
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.6",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "socket.io-client": "^2.3.0",
