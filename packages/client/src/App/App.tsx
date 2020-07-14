@@ -9,6 +9,7 @@ import store from '../store/store'
 // import Chat from './applications/chat'
 import Counter from './features/Counter'
 import Todo from './features/Todo'
+import ProductList from './features/products/ProductList'
 
 export interface IAppProps {}
 
@@ -18,7 +19,8 @@ const App: React.FC<IAppProps> = () => {
       <div className={styles['App']}>
         <p className={styles['App__text']}>App</p>
         {/* <Chat /> */}
-        <Todo />
+        {/* <Todo /> */}
+        <ProductList />
       </div>
     </Provider>
   )

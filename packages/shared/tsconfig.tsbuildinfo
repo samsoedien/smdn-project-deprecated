@@ -201,9 +201,14 @@
         "signature": "cd6efb9467a8b6338ece2e2855e37765700f2cd061ca54b01b33878cf5c7677e",
         "affectsGlobalScope": true
       },
+      "./src/interfaces/product.ts": {
+        "version": "479a81c5b3189f69f607f1ffeee88ad9ff894fefc066d4d51c8a3a6ec1b0cfd6",
+        "signature": "429f2ff219a0e633fde7f18cc8686f4ad9c9e931f4df520a6e53eba03f30f8c8",
+        "affectsGlobalScope": false
+      },
       "./src/index.ts": {
-        "version": "bf2d3a124c26ff8720a98a4da0a0865c44f5187b656593a0992cf9eb54972ad3",
-        "signature": "da9b58daa7c95f5d220aac14d14a557cd8095f225f5dc51c980a2333da958e51",
+        "version": "c825a091a5ce06c26505a8895a7273278206619464b022bb44d8cc334ef923b0",
+        "signature": "3ba2c76d0827edf7e33c71423e198ab14e6dc300fc60c1a8308d66591c13b837",
         "affectsGlobalScope": false
       }
     },
@@ -242,8 +247,16 @@
       "composite": true,
       "configFilePath": "./tsconfig.json"
     },
-    "referencedMap": {},
-    "exportedModulesMap": {},
+    "referencedMap": {
+      "./src/index.ts": [
+        "./src/interfaces/product.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "./src/index.ts": [
+        "./src/interfaces/product.ts"
+      ]
+    },
     "semanticDiagnosticsPerFile": [
       "../../node_modules/typescript/lib/lib.dom.d.ts",
       "../../node_modules/typescript/lib/lib.es2015.collection.d.ts",
@@ -285,7 +298,8 @@
       "../../node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "../../node_modules/typescript/lib/lib.esnext.promise.d.ts",
       "../../node_modules/typescript/lib/lib.esnext.string.d.ts",
-      "./src/index.ts"
+      "./src/index.ts",
+      "./src/interfaces/product.ts"
     ]
   },
   "version": "3.9.5"
