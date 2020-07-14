@@ -1,5 +1,5 @@
 import React from 'react'
-// import logo from '../logo.svg'
+// import logo from '../assets/img/logo.svg'
 // import PropTypes from 'prop-types'
 import styles from './App.module.scss'
 import { Provider } from 'react-redux'
