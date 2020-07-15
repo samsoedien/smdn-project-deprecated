@@ -1,13 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from './reducers/counterSlice'
-import todosReducer from './reducers/todoSlice'
+import { configureStore, combineReducers, getDefaultMiddleware } from '@reduxjs/toolkit'
+import logger from 'redux-logger'
 
-import products from './products/products'
+import productsSlice from './products/productsSlice'
+
+const rootReducer = combineReducers({
+  products: productsSlice.reducer,
+})
 
 export default configureStore({
-  reducer: {
-    counter: counterReducer,
-    todos: todosReducer,
-    products,
-  },
+  reducer: rootReducer,
+  middleware: [...getDefaultMiddleware(), logger],
+  devTools: process.env.NODE_ENV !== 'production',
 })

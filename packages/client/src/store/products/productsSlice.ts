@@ -33,4 +33,4 @@ const productsSlice = createSlice({
 
 export const { create: createProductActionCreator, remove: removeProductActionCreator } = productsSlice.actions
 
-export default productsSlice.reducer
+export default productsSlice
