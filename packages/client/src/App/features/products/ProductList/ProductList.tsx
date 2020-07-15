@@ -1,18 +1,14 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
-import { useSelector } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import { IProduct } from '@smdn-project/shared'
 import ProductItem from '../ProductItem'
 
-export interface IProductListProps {}
-
-interface IAppState {
+export interface IProductListProps {
   products: IProduct[]
 }
 
-const ProductList: React.FC<IProductListProps> = () => {
-  const products = useSelector((state: IAppState) => state.products)
+const ProductList: React.FC<IProductListProps> = ({ products }) => {
   return (
     <ul>
       {products.map((product, index: number) => (
@@ -24,6 +20,8 @@ const ProductList: React.FC<IProductListProps> = () => {
   )
 }
 
-ProductList.propTypes = {}
+ProductList.propTypes = {
+  products: PropTypes.any.isRequired,
+}
 
 export default ProductList

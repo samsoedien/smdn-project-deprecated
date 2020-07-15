@@ -2,7 +2,7 @@ import React, { useState, FormEvent, ChangeEvent } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
 
-import { createProductActionCreator } from '../../../../store/products/products'
+import { createProductActionCreator } from '../../../../store/products/productsSlice'
 
 export interface IProductFormProps {}
 

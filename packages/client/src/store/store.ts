@@ -12,3 +12,5 @@ export default configureStore({
   middleware: [...getDefaultMiddleware(), logger],
   devTools: process.env.NODE_ENV !== 'production',
 })
+
+export type RootState = ReturnType<typeof rootReducer>

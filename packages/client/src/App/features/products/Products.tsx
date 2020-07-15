@@ -1,16 +1,20 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 
+import { IProduct } from '@smdn-project/shared'
+import { RootState } from '../../../store/store'
 import ProductForm from './ProductForm'
 import ProductList from './ProductList'
 
 export interface IProductsProps {}
 
-const Products: React.FC<IProductsProps> = (props) => {
+const Products: React.FC<IProductsProps> = () => {
+  const products = useSelector((state: RootState) => state.products)
   return (
     <>
       <ProductForm />
-      <ProductList />
+      <ProductList products={products} />
     </>
   )
 }
