@@ -1,8 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 
-import { IProduct } from '@smdn-project/shared'
 import { RootState } from '../../../store/store'
 import ProductForm from './ProductForm'
 import ProductList from './ProductList'

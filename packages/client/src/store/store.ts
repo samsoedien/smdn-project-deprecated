@@ -4,7 +4,7 @@ import logger from 'redux-logger'
 import productsSlice from './products/productsSlice'
 
 const rootReducer = combineReducers({
-  products: productsSlice.reducer,
+  products: productsSlice,
 })
 
 export default configureStore({

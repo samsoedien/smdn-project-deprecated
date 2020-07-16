@@ -1,8 +1,19 @@
-import { PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit'
 import { v1 as uuid } from 'uuid'
 
 import { IProduct } from '@smdn-project/shared'
-import { createSlice } from '@reduxjs/toolkit'
+
+interface IProductState {
+  products: IProduct[]
+  loading: boolean
+  errors: object
+}
+
+const initialState: IProductState = {
+  products: [],
+  loading: false,
+  errors: {},
+}
 
 const products: IProduct[] = [
   {
@@ -15,12 +26,18 @@ const products: IProduct[] = [
   },
 ]
 
+const getProductById = createAsyncThunk('api/v1/products/:id', () => {})
+
 const productsSlice = createSlice({
   name: 'products',
   initialState: products,
   reducers: {
     create: (state, { payload }: PayloadAction<IProduct>) => {
       state.push(payload)
+    },
+    edit: (state, { payload }: PayloadAction<IProduct>) => {
+      let product = state.find((product) => product.id === payload.id)
+      if (product) product = payload
     },
     remove: (state, { payload }: PayloadAction<IProduct>) => {
       const index = state.findIndex((product) => product.id === payload.id)
@@ -31,6 +48,10 @@ const productsSlice = createSlice({
   },
 })
 
-export const { create: createProductActionCreator, remove: removeProductActionCreator } = productsSlice.actions
+export const {
+  create: createProductActionCreator,
+  edit: editProductActionCreator,
+  remove: removeProductActionCreator,
+} = productsSlice.actions
 
-export default productsSlice
+export default productsSlice.reducer
