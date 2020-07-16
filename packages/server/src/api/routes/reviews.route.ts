@@ -1,4 +1,4 @@
-import express, { Router, RouterOptions } from 'express'
+import { Router, RouterOptions } from 'express'
 
 import * as reviewController from '../controllers/reviews.controller'
 import { protectRoutes, authorizeUser } from '../middleware/auth.middelware'

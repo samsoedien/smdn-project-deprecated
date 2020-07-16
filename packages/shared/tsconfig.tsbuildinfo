@@ -202,13 +202,13 @@
         "affectsGlobalScope": true
       },
       "./src/interfaces/product.ts": {
-        "version": "ffa713ec2c83d9b5b679be8df5272d960406a8334657cebfa1f92d1f97c477d9",
-        "signature": "871b8d2e22c66c5bc512a453145d2ae6ec5f86284dfbc30ec2dafd8d4ce1f3dd",
+        "version": "097b81dd2ed55f38433c236a46adc1e9067bd513beb8fc5b148a33104d1f2a76",
+        "signature": "fe36c41c81d4d6eeed64a5faabdad56d03473fb90908b3a5b7220a561278e0aa",
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
         "version": "c825a091a5ce06c26505a8895a7273278206619464b022bb44d8cc334ef923b0",
-        "signature": "576ec025e56d3d3aff8346ff4d38f043141c675adc7890628ba2ec0ce9143cde",
+        "signature": "3ba2c76d0827edf7e33c71423e198ab14e6dc300fc60c1a8308d66591c13b837",
         "affectsGlobalScope": false
       }
     },
