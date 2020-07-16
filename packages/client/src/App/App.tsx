@@ -2,11 +2,10 @@ import React from 'react'
 // import logo from '../assets/img/logo.svg'
 // import PropTypes from 'prop-types'
 import styles from './App.module.scss'
-import { Provider, useSelector } from 'react-redux'
 // import { Button } from '@smdn/core'
 
-import store, { RootState } from '../store/store'
 import Products from './features/Products'
+import Contact from './features/Contact'
 
 import { IProduct } from '@smdn-project/shared'
 
@@ -23,6 +22,7 @@ const App: React.FC<IAppProps> = () => {
       {/* <Chat /> */}
       {/* <Todo /> */}
       <Products />
+      <Contact />
     </div>
   )
 }
