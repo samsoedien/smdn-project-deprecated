@@ -34,7 +34,7 @@ const Contact: React.FC<IContactProps> = () => {
     offerte: false,
   })
 
-  const onChangeCallback = (e: ChangeEvent<HTMLInputElement>): void =>
+  const onChangeCallback = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void =>
     setFormData({ ...formData, [e.target.name]: e.target.value })
 
   const onSubmitCallback = (e: FormEvent<HTMLFormElement>): void => {

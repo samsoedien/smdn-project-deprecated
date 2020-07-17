@@ -4,13 +4,15 @@ import React from 'react'
 import styles from './App.module.scss'
 // import { Button } from '@smdn/core'
 
-import Products from './features/Products'
-import Contact from './features/Contact'
+import Posts from './features/Posts'
+// import Products from './features/Products'
+// import Contact from './features/Contact'
 
-import { IProduct } from '@smdn-project/shared'
+import { IProduct, IPost } from '@smdn-project/shared'
 
 export interface IAppState {
   products: IProduct[]
+  posts: IPost[]
 }
 
 export interface IAppProps {}
@@ -20,9 +22,11 @@ const App: React.FC<IAppProps> = () => {
     <div className={styles['App']}>
       <p className={styles['App__text']}>App</p>
       {/* <Chat /> */}
-      {/* <Todo /> */}
+      {/* <Todo />
       <Products />
-      <Contact />
+      <Button>Hello world</Button> */}
+      {/* <Contact /> */}
+      <Posts />
     </div>
   )
 }

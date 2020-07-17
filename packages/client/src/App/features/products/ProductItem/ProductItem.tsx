@@ -2,7 +2,7 @@ import React, { MouseEvent, useState, ChangeEvent } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
 
-import { removeProductActionCreator } from '../../../../store/products/productsSlice'
+import { removeProductActionCreator, getProductByIdThunkActionCreator } from '../../../../store/products/productsSlice'
 
 export interface IProductModel {
   id: string
@@ -34,7 +34,9 @@ const Product: React.FC<IProductProps> = ({ product }) => {
       {isEditable ? (
         <input type="text" value={product.name} onChange={(e) => handleOnChange(e)} />
       ) : (
-        <span>{product.name}</span>
+        <a onClick={() => getProductByIdThunkActionCreator()} href="/products">
+          {product.name}
+        </a>
       )}
       <button onClick={(e) => handleOnEdit(e, product.id)} className="btn btn-warning">
         Edit

@@ -2,9 +2,11 @@ import { configureStore, combineReducers, getDefaultMiddleware } from '@reduxjs/
 import logger from 'redux-logger'
 
 import productsSlice from './products/productsSlice'
+import postsSlice from './posts/postsSlice'
 
 const rootReducer = combineReducers({
   products: productsSlice,
+  posts: postsSlice,
 })
 
 export default configureStore({

@@ -1,7 +1,8 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
+import { getProductByIdThunkActionCreator } from '../../../store/products/productsSlice'
 import { RootState } from '../../../store/store'
 import ProductForm from './ProductForm'
 import ProductList from './ProductList'
@@ -9,9 +10,14 @@ import ProductList from './ProductList'
 export interface IProductsProps {}
 
 const Products: React.FC<IProductsProps> = () => {
-  const products = useSelector((state: RootState) => state.products)
+  const dispatch = useDispatch()
+  const products = useSelector((state: RootState) => state.products.products)
+
   return (
     <>
+      <button className="btn btn-primary" onClick={() => dispatch(getProductByIdThunkActionCreator())}>
+        Get Products
+      </button>
       <ProductForm />
       <ProductList products={products} />
     </>

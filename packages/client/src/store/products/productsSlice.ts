@@ -1,49 +1,55 @@
-import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit'
-import { v1 as uuid } from 'uuid'
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
+import axios from 'axios'
 
 import { IProduct } from '@smdn-project/shared'
 
 interface IProductState {
   products: IProduct[]
   loading: boolean
-  errors: object
+  error: string | null
 }
 
-const initialState: IProductState = {
+const productsInitialState: IProductState = {
   products: [],
   loading: false,
-  errors: {},
+  error: null,
 }
 
-const products: IProduct[] = [
-  {
-    id: uuid(),
-    name: 'product name',
-  },
-  {
-    id: uuid(),
-    name: 'hi there',
-  },
-]
+// const thunkFunction = (): AppThunk => async (dispatch) => {
+//   try {
+//     const res = await axios.get('/https://jsonplaceholder.typicode.com/todos/1')
+//     dispatch(getProductsSuccess())
+//   } catch {
+//     dispatch(getProductsFailed())
+//   }
+// }
 
-const getProductById = createAsyncThunk('api/v1/products/:id', () => {})
+export const getProductByIdThunkActionCreator = createAsyncThunk('products/fetchProductById', async (id, thunkAPI) => {
+  const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
+  return response.data
+})
 
 const productsSlice = createSlice({
   name: 'products',
-  initialState: products,
+  initialState: productsInitialState,
   reducers: {
     create: (state, { payload }: PayloadAction<IProduct>) => {
-      state.push(payload)
+      state.products.push(payload)
     },
     edit: (state, { payload }: PayloadAction<IProduct>) => {
-      let product = state.find((product) => product.id === payload.id)
+      let product = state.products.find((product) => product.id === payload.id)
       if (product) product = payload
     },
     remove: (state, { payload }: PayloadAction<IProduct>) => {
-      const index = state.findIndex((product) => product.id === payload.id)
+      const index = state.products.findIndex((product) => product.id === payload.id)
       if (index !== -1) {
-        state.splice(index, 1)
+        state.products.splice(index, 1)
       }
+    },
+  },
+  extraReducers: {
+    [getProductByIdThunkActionCreator.fulfilled as any]: (state, action: PayloadAction<IProduct>) => {
+      state.products.push(action.payload)
     },
   },
 })

@@ -202,13 +202,18 @@
         "affectsGlobalScope": true
       },
       "./src/interfaces/product.ts": {
-        "version": "097b81dd2ed55f38433c236a46adc1e9067bd513beb8fc5b148a33104d1f2a76",
+        "version": "24c18b2ea775d5f1f5908f817b0a56c4950f07e4573ae6c972c869f1ba6586f2",
         "signature": "fe36c41c81d4d6eeed64a5faabdad56d03473fb90908b3a5b7220a561278e0aa",
         "affectsGlobalScope": false
       },
+      "./src/interfaces/post.ts": {
+        "version": "ed70e2ab770403df58024ff36060f73ffa16c3c83fcb203ea97feb51c04fc852",
+        "signature": "e2e8042010aecbfa1ec44ff5229190be75f48ce5966f4c606f3fe2867d74f9cf",
+        "affectsGlobalScope": false
+      },
       "./src/index.ts": {
-        "version": "c825a091a5ce06c26505a8895a7273278206619464b022bb44d8cc334ef923b0",
-        "signature": "3ba2c76d0827edf7e33c71423e198ab14e6dc300fc60c1a8308d66591c13b837",
+        "version": "d2147548c5f4ab45b741ea3f78a24ec431fbd4ff1efc3319345885f1fa6e3ebb",
+        "signature": "3333c60336b454fdc6acbbdda7a3631348d469da276b55f4d52065c90c0e4b70",
         "affectsGlobalScope": false
       }
     },
@@ -249,11 +254,13 @@
     },
     "referencedMap": {
       "./src/index.ts": [
+        "./src/interfaces/post.ts",
         "./src/interfaces/product.ts"
       ]
     },
     "exportedModulesMap": {
       "./src/index.ts": [
+        "./src/interfaces/post.ts",
         "./src/interfaces/product.ts"
       ]
     },
@@ -299,6 +306,7 @@
       "../../node_modules/typescript/lib/lib.esnext.promise.d.ts",
       "../../node_modules/typescript/lib/lib.esnext.string.d.ts",
       "./src/index.ts",
+      "./src/interfaces/post.ts",
       "./src/interfaces/product.ts"
     ]
   },
