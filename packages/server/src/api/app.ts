@@ -15,6 +15,8 @@ import cookieparser from 'cookie-parser'
 // import reviewRoutes from './routes/reviews.route'
 // import errorHandler from './middleware/error.middleware'
 
+import postRoutes from './routes/posts.route'
+
 const app: Application = express()
 
 const limiter = rateLimit({
@@ -42,6 +44,7 @@ app.get('/', (req: Request, res: Response) => res.send('Rest API Running.'))
 // app.use('/api/v1/users', userRoutes)
 // app.use('/api/v1/products', productRoutes)
 // app.use('/api/v1/reviews', reviewRoutes)
+app.use('/api/v1/posts', postRoutes)
 
 // app.use(errorHandler)
 
