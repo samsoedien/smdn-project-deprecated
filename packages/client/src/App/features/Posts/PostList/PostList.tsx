@@ -8,10 +8,14 @@ export interface IPostListProps {
 }
 
 const PostList: React.FC<IPostListProps> = ({ posts }) => {
+  console.log('list', posts)
   return (
     <ul>
       {posts.map((post, index) => (
-        <li>{post.body}</li>
+        <li key={post.id}>
+          <h3>{post.author}</h3>
+          <p>{post.body}</p>
+        </li>
       ))}
     </ul>
   )
