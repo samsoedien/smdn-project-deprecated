@@ -1,15 +1,11 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
-import { Formik, Form } from 'formik'
-import * as Yup from 'yup'
+import { Formik } from 'formik'
 
 import Input from './Input'
+import { ContactSchema } from './contactFormValidation'
 
 export interface IContactFormik {}
-
-const ContactSchema = Yup.object().shape({
-  name: Yup.string().min(2, 'Must be at least 3 characters').max(15, 'Must be less than 15 characters').required(),
-})
 
 const ContactFormik: React.FC<IContactFormik> = () => {
   return (
@@ -21,16 +17,37 @@ const ContactFormik: React.FC<IContactFormik> = () => {
           setSubmitting(false)
         }, 3000)
       }}
-      initialValues={{ name: '' }}
+      initialValues={{ name: '', email: '', subject: '', message: '' }}
       validationSchema={ContactSchema}
     >
-      {(props) => (
-        <Form>
-          <Input name="name" label="First name" />
-          <button type="submit" className="btn btn-primary" disabled={props.isSubmitting || !props.dirty}>
-            {props.isSubmitting ? 'Loading...' : 'Submit'}
+      {({ handleSubmit, handleChange, isSubmitting, values, dirty, touched, errors }) => (
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name">Name</label>
+          <input type="text" name="name" value={values.name} onChange={handleChange} className="form-control" />
+          <span className="form-text text-muted">{touched && errors.name}</span>
+
+          <label htmlFor="email">Email Address</label>
+          <input type="text" name="email" value={values.email} onChange={handleChange} className="form-control" />
+          <span className="form-text text-muted">{touched && errors.email}</span>
+
+          <label htmlFor="subject">Subject</label>
+          <input type="text" name="subject" value={values.subject} onChange={handleChange} className="form-control" />
+          <span className="form-text text-muted">{touched && errors.subject}</span>
+
+          <label htmlFor="message">Message</label>
+          <textarea
+            rows={8}
+            name="message"
+            value={values.message}
+            onChange={handleChange}
+            className="form-control"
+          ></textarea>
+          <span className="form-text text-muted">{touched && errors.message}</span>
+
+          <button type="submit" className="btn btn-primary" disabled={isSubmitting || !dirty}>
+            {isSubmitting ? 'Loading...' : 'Submit'}
           </button>
-        </Form>
+        </form>
       )}
     </Formik>
   )
