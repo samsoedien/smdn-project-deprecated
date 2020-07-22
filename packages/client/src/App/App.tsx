@@ -10,6 +10,7 @@ import styles from './App.module.scss'
 import Posts from './features/Posts'
 import Products from './features/Products'
 import Contact from './features/Contact'
+import ContactFormik from './features/Contact/ContactFormik'
 
 export interface IAppState {
   products: IProduct[]
@@ -26,7 +27,7 @@ const App: React.FC<IAppProps> = () => {
         <Switch>
           <Route exact path="/" component={Posts} />
           <Route exact path="/products" component={Products} />
-          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/contact" component={ContactFormik} />
         </Switch>
       </div>
     </Router>
