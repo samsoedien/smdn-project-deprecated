@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-import { IPost } from '@smdn-project/shared'
+import { IPost } from '@smdn-project/common'
 
 const PostSchema = new mongoose.Schema<IPost>({
   // id: {

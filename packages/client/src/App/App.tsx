@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 // import { Button } from '@smdn/core'
 
-import { IProduct, IPost } from '@smdn-project/shared'
+import { IProduct, IPost } from '@smdn-project/common'
 // import logo from '../assets/img/logo.svg'
 // import PropTypes from 'prop-types'
 import styles from './App.module.scss'

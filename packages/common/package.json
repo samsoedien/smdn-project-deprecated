@@ -1,5 +1,5 @@
 {
-  "name": "@smdn-project/shared",
+  "name": "@smdn-project/common",
   "version": "0.1.0",
   "description": "Shared functions and utils",
   "main": "dist/index.js",

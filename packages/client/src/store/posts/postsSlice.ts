@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
-import { IPost } from '@smdn-project/shared'
+import { IPost } from '@smdn-project/common'
 import axios from 'axios'
 
 interface IPostState {

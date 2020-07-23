@@ -7,7 +7,7 @@ export interface IInputProps {
   onChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
-const Input: React.FC<IInputProps | any> = (props) => {
+const Input: React.FC<IInputProps> = (props) => {
   return <input type="text" className="form-control" {...props} />
 }
 

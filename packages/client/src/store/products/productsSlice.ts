@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 import axios from 'axios'
 
-import { IProduct } from '@smdn-project/shared'
+import { IProduct } from '@smdn-project/common'
 
 interface IProductState {
   products: IProduct[]

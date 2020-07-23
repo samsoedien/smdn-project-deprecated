@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { IPost } from '@smdn-project/shared'
+import { IPost } from '@smdn-project/common'
 
 export interface IPostListProps {
   posts: IPost[]
