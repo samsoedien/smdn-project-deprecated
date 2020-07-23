@@ -211,9 +211,19 @@
         "signature": "e2e8042010aecbfa1ec44ff5229190be75f48ce5966f4c606f3fe2867d74f9cf",
         "affectsGlobalScope": false
       },
+      "../../node_modules/@types/yup/index.d.ts": {
+        "version": "7ee7cefdd178f3ee4f6abd02efb108ed448beb86c4752c2f2b2cded6d04785fa",
+        "signature": "7ee7cefdd178f3ee4f6abd02efb108ed448beb86c4752c2f2b2cded6d04785fa",
+        "affectsGlobalScope": false
+      },
+      "./src/validation/contactvalidationschema.ts": {
+        "version": "4cac8dcd9a81eaa327d6b8b0f3510ed99f45ae2bbd4e1d868aac5c2529ebeb1c",
+        "signature": "d957fbf12f4aad9661b5a5a78328c1607ede684d3490c76da93a7e97ec8467af",
+        "affectsGlobalScope": false
+      },
       "./src/index.ts": {
-        "version": "d2147548c5f4ab45b741ea3f78a24ec431fbd4ff1efc3319345885f1fa6e3ebb",
-        "signature": "3333c60336b454fdc6acbbdda7a3631348d469da276b55f4d52065c90c0e4b70",
+        "version": "d2f9587f65cdcfa8316304fde017f7eb432e29d4acc902081bff9cdedc36c551",
+        "signature": "329e0f2a98947cde9a54cd12a2f3643788a48278743c733988393c4870c86c15",
         "affectsGlobalScope": false
       }
     },
@@ -255,16 +265,25 @@
     "referencedMap": {
       "./src/index.ts": [
         "./src/interfaces/post.ts",
-        "./src/interfaces/product.ts"
+        "./src/interfaces/product.ts",
+        "./src/validation/contactvalidationschema.ts"
+      ],
+      "./src/validation/contactvalidationschema.ts": [
+        "../../node_modules/@types/yup/index.d.ts"
       ]
     },
     "exportedModulesMap": {
       "./src/index.ts": [
         "./src/interfaces/post.ts",
-        "./src/interfaces/product.ts"
+        "./src/interfaces/product.ts",
+        "./src/validation/contactvalidationschema.ts"
+      ],
+      "./src/validation/contactvalidationschema.ts": [
+        "../../node_modules/@types/yup/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
+      "../../node_modules/@types/yup/index.d.ts",
       "../../node_modules/typescript/lib/lib.dom.d.ts",
       "../../node_modules/typescript/lib/lib.es2015.collection.d.ts",
       "../../node_modules/typescript/lib/lib.es2015.core.d.ts",
@@ -307,7 +326,8 @@
       "../../node_modules/typescript/lib/lib.esnext.string.d.ts",
       "./src/index.ts",
       "./src/interfaces/post.ts",
-      "./src/interfaces/product.ts"
+      "./src/interfaces/product.ts",
+      "./src/validation/contactvalidationschema.ts"
     ]
   },
   "version": "3.9.5"

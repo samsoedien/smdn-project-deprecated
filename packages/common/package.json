@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Shared functions and utils",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "repository": "https://github.com/samsoedien/smdn-project/tree/master/packages/shared",
   "author": "Samsoedien",
   "license": "MIT",
@@ -12,5 +13,11 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist/* && rm -rf lib/* && rm -rf *.tsbuildinfo"
+  },
+  "dependencies": {
+    "yup": "^0.29.1"
+  },
+  "devDependencies": {
+    "@types/yup": "^0.29.3"
   }
 }

@@ -1,6 +1,6 @@
 import * as Yup from 'yup'
 
-export const ContactSchema = Yup.object().shape({
+export const ContactValidationSchema = Yup.object().shape({
   name: Yup.string()
     .min(2, 'Must be at least 3 characters')
     .max(15, 'Must be less than 15 characters')
@@ -12,3 +12,5 @@ export const ContactSchema = Yup.object().shape({
     .max(6000, "C'mon are you writing an essay here?")
     .required('Please enter your message'),
 })
+
+export default ContactValidationSchema

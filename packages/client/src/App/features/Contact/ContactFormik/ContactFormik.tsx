@@ -2,8 +2,8 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 import { Formik } from 'formik'
 
+import { ContactValidationSchema } from '@smdn-project/common'
 import Input from '../../../components/Input'
-import { ContactSchema } from './contactFormValidation'
 
 export interface IContactFormik {}
 
@@ -18,7 +18,7 @@ const ContactFormik: React.FC<IContactFormik> = () => {
         }, 3000)
       }}
       initialValues={{ name: '', email: '', subject: '', message: '' }}
-      validationSchema={ContactSchema}
+      validationSchema={ContactValidationSchema}
     >
       {({ handleSubmit, handleChange, isSubmitting, values, dirty, touched, errors }) => (
         <form onSubmit={handleSubmit}>
