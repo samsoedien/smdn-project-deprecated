@@ -54,7 +54,7 @@
     "@types/react-dom": "^16.9.8",
     "axios": "^0.19.2",
     "bootstrap": "^5.0.0-alpha1",
-    "bootstrap-icons": "^1.0.0-alpha4",
+    "bootstrap-icons": "1.0.0-alpha5",
     "formik": "^2.1.5",
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.6",
