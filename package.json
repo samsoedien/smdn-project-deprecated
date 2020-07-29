@@ -19,7 +19,7 @@
     "build": "yarn lerna run build --stream",
     "clean": "yarn lerna clean --yes",
     "lint": "yarn lint:scripts && yarn lint:styles",
-    "lint:scripts": "eslint ./packages/**/*.{ts,tsx}",
+    "lint:scripts": "eslint \"./packages/**/*.{js,jsx,ts,tsx}\"",
     "lint:styles": "stylelint ./packages/**/*.{css,scss,tsx}",
     "test": "jest",
     "storybook": "yarn lerna run storybook --stream",
