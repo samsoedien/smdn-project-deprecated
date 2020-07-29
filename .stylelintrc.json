@@ -17,6 +17,7 @@
     "no-descending-specificity": null,
     "color-no-invalid-hex": null,
     "plugin/selector-bem-pattern": {
+      "preset": "bem",
       "componentName": "[A-Z]+",
       "componentSelectors": {
         "initial": "^\\.{componentName}(?:-[a-z]+)?$",

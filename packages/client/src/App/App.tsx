@@ -12,6 +12,8 @@ import Products from './features/Products'
 import Contact from './features/Contact'
 import ContactFormik from './features/Contact/ContactFormik'
 
+import HeroBanner from './templates/HeroBanner'
+
 export interface IAppState {
   products: IProduct[]
   posts: IPost[]
@@ -23,6 +25,7 @@ const App: React.FC<IAppProps> = () => {
   return (
     <Router>
       <div className={styles['App']}>
+        <HeroBanner />
         <p className={styles['App__text']}>App</p>
         <Switch>
           <Route exact path="/" component={Posts} />
