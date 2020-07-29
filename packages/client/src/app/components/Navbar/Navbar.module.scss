@@ -1,0 +1,56 @@
+/* stylelint-disable */
+
+/** @define smdn-navbar */
+
+.smdn-navbar {
+  // height: 80px;
+  background: #55d6aa;
+}
+
+.smdn-navbar::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.smdn-navbar-hi {
+  color: red;
+}
+
+.smdn-navbar--container {
+  // width: 80%;
+  // margin: 0 auto;
+  float: right;
+}
+
+.smdn-navbar__brand {
+  float: left;
+}
+
+.smdn-navbar__brand__link {
+  padding: 12px 0;
+}
+
+.smdn-navbar__brand__link__site-logo {
+  height: 60px;
+}
+
+.smdn-navbar__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.smdn-navbar__list__item {
+  display: inline-block;
+  margin: auto 48px;
+  padding: auto 0;
+}
+
+.smdn-navbar__list__item__link {
+  text-decoration: none;
+}
+
+.active {
+  color: white !important;
+}
