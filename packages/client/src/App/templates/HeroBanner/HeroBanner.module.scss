@@ -2,6 +2,20 @@
 
 /** @define smdn-hero-banner */
 
-.smdn-hero-banner {
+.hero-banner__image {
   height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  width: auto;
+  height: 100vh;
+  z-index: 100;
+  overflow: hidden;
+  width: auto;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

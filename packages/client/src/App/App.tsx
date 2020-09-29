@@ -26,12 +26,12 @@ const App: React.FC<IAppProps> = () => {
     <Router>
       <div className={styles['App']}>
         <HeroBanner />
-        <p className={styles['App__text']}>App</p>
+        {/* <p className={styles['App__text']}>App</p>
         <Switch>
           <Route exact path="/" component={Posts} />
           <Route exact path="/products" component={Products} />
           <Route exact path="/contact" component={ContactFormik} />
-        </Switch>
+        </Switch> */}
       </div>
     </Router>
   )
