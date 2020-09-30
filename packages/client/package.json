@@ -2,6 +2,7 @@
   "name": "@smdn-project/client",
   "version": "0.1.0",
   "repository": "https://github.com/samsoedien/smdn-project/tree/master/packages/client",
+  "author": "Nathan Samsoedien <contact@samsoedien.com> (https://samsoedien.com)",
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "react-app-rewired start",
