@@ -1,3 +1,17 @@
+# Contributing
+
+## Develop
+
+- Clone the repo use `git clone git@github.com:samsoedien/smdn-project.git`
+- (optional) Enter prassphrase when prompted
+- run `yarn install` to install all dependencies and create node_modules folder
+- run `yarn build` to create dist folder that can be cross-referenced by each package in the monorepo
+- run `yarn start` to start a server to compile the code.
+
+## Commit
+
+Before committing run a linting check using `yarn lint` to see if there are any formatting or code style issues. Linting error should atleast be solved in order to perform a successful commit, otherwise the commit will be refused (through the use of git hooks).
+
 When committing new changes write your commit message according to Angular commit convention: [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
 - build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
