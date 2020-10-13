@@ -10,7 +10,6 @@ import styles from './App.module.scss'
 import Posts from './features/Posts'
 import Products from './features/Products'
 import Contact from './features/Contact'
-import ContactFormik from './features/Contact/ContactFormik'
 
 import HeroBanner from './templates/HeroBanner'
 
@@ -26,6 +25,7 @@ const App: React.FC<IAppProps> = () => {
     <Router>
       <div className={styles['App']}>
         <HeroBanner />
+        <Contact />
         {/* <p className={styles['App__text']}>App</p>
         <Switch>
           <Route exact path="/" component={Posts} />

@@ -1,5 +1,6 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
+import styles from './ContactFormik.module.scss'
 import { Formik } from 'formik'
 
 import { ContactValidationSchema } from '@smdn-project/common'
@@ -21,7 +22,7 @@ const ContactFormik: React.FC<IContactFormik> = () => {
       validationSchema={ContactValidationSchema}
     >
       {({ handleSubmit, handleChange, isSubmitting, values, dirty, touched, errors }) => (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={styles['form']}>
           <label htmlFor="name">Name</label>
           <Input name="name" value={values.name} onChange={handleChange} />
           <span className="form-text text-muted">{touched.name && errors.name}</span>

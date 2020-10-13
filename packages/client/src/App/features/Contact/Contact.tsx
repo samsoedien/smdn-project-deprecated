@@ -1,63 +1,29 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react'
 import PropTypes from 'prop-types'
+import { useDispatch } from 'react-redux'
 
+import { IContactForm } from '@smdn-project/common'
+// import SubmitContactFormThunkActionCreator from '../../../store/formsSlice'
 import ContactForm from './ContactForm'
-
-interface IContactForm {
-  firstName: string
-  lastName: string
-  address?: string
-  postalCode?: string
-  city?: string
-  email: string
-  phone: string
-  subject: string
-  message: string
-  date: Date
-  offerte: boolean
-}
 
 export interface IContactProps {}
 
 const Contact: React.FC<IContactProps> = () => {
-  const [formData, setFormData] = useState<IContactForm>({
-    firstName: '',
-    lastName: '',
-    address: '',
-    postalCode: '',
-    city: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-    date: new Date(),
-    offerte: false,
-  })
+  const dispatch = useDispatch()
+  // const [formData, setFormData] = useState<IContactForm>({
+  //   firstName: '',
+  //   lastName: '',
+  //   email: '',
+  //   subject: '',
+  //   message: '',
+  // })
 
-  const onChangeCallback = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void =>
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-
-  const onSubmitCallback = (e: FormEvent<HTMLFormElement>): void => {
-    e.preventDefault()
-    console.log(formData)
-    // dispatch contact form
+  const onSubmitCallback = (formData: IContactForm): void => {
+    console.log('formData', formData)
+    // dispatch(SubmitContactFormThunkActionCreator(formData))
   }
 
-  return (
-    <ContactForm
-      firstName={formData.firstName}
-      lastName={formData.lastName}
-      address={formData.address}
-      postalCode={formData.postalCode}
-      city={formData.city}
-      email={formData.email}
-      phone={formData.phone}
-      subject={formData.subject}
-      message={formData.message}
-      onChangeCallback={onChangeCallback}
-      onSubmitCallback={onSubmitCallback}
-    />
-  )
+  return <ContactForm onSubmitCallback={onSubmitCallback} />
 }
 
 Contact.propTypes = {}

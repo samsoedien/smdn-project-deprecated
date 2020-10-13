@@ -17,6 +17,7 @@
     "native": "yarn lerna run start --stream --scope @smdn-project/native",
     "bootstrap": "yarn lerna bootstrap",
     "build": "yarn lerna run build --stream",
+    "build:common": "yarn lerna run build --scope @smdn-project/common",
     "clean": "yarn lerna clean --yes",
     "lint": "yarn lint:scripts && yarn lint:styles",
     "lint:scripts": "eslint \"./packages/**/*.{js,jsx,ts,tsx}\"",

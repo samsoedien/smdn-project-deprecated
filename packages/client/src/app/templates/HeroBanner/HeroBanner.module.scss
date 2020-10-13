@@ -4,7 +4,7 @@
 
 .hero-banner__image {
   height: 100vh;
-  position: absolute;
+  position: static;
   top: 0;
   left: 0;
   min-width: 100%;
@@ -17,5 +17,6 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-attachment: fixed;
+  margin-bottom: 48px;
 }

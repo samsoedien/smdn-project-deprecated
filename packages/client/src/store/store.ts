@@ -3,10 +3,12 @@ import logger from 'redux-logger'
 
 import productsSlice from './products/productsSlice'
 import postsSlice from './posts/postsSlice'
+import formsSlice from './formsSlice'
 
 const rootReducer = combineReducers({
   products: productsSlice,
   posts: postsSlice,
+  forms: formsSlice
 })
 
 export default configureStore({
